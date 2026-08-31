@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
 
 const nextConfig: NextConfig = {
   // Cloudflare Workers doesn't run Next's built-in image-optimization
@@ -11,3 +12,8 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
+
+// Lets `npm run dev` read Cloudflare bindings/secrets (from .dev.vars) via
+// getCloudflareContext(), same as the deployed Worker — so route handlers
+// don't need a separate code path for local development.
+initOpenNextCloudflareForDev();
