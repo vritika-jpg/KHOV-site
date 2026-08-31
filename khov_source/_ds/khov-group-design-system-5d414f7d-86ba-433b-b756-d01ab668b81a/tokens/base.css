@@ -1,0 +1,12 @@
+html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility }
+body {
+  margin: 0;
+  background: var(--canvas);
+  color: var(--body);
+  font: var(--text-body-md);
+  text-wrap: pretty;
+}
+a { color: var(--text-link); text-decoration: none; border-bottom: 1px solid color-mix(in oklab, var(--primary) 35%, transparent) }
+a:hover { color: var(--primary-active); border-bottom-color: var(--primary-active) }
+*, *::before, *::after { box-sizing: border-box }
+::selection { background: var(--accent-mist); color: var(--ink) }

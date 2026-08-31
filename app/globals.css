@@ -1,0 +1,172 @@
+@import "tailwindcss";
+
+/* Design tokens, ported from the KHOV Group design system
+   (khov_source/_ds/.../tokens/*.css) so Tailwind utilities match the
+   Claude Design mockup exactly. */
+:root {
+  /* Brand */
+  --primary: #1a3a3a;
+  --primary-active: #14211f;
+  --primary-disabled: #e0d8c6;
+  --accent: #e5b048;
+  --accent-active: #d19d33;
+
+  /* Ink */
+  --ink: #14211f;
+  --body-strong: #1f302e;
+  --body: #3a4a48;
+  --muted: #4f5f5c;
+  --muted-soft: #6b7d7a;
+
+  /* Lines */
+  --hairline: #e0d8c6;
+  --hairline-soft: #ece5d6;
+
+  /* Surfaces */
+  --canvas: #f8f3e8;
+  --surface-soft: #f3ecdd;
+  --surface-card: #ede4d2;
+  --surface-strong: #e3d9c4;
+  --surface-dark: #14211f;
+  --surface-dark-elevated: #1a3a3a;
+
+  /* On-color text */
+  --on-primary: #f8f3e8;
+  --on-dark: #f8f3e8;
+  --on-dark-soft: #9db3ae;
+  --on-accent: #14211f;
+
+  /* Card fills */
+  --card-deep: #1a3a3a;
+  --card-aqua: #2f9788;
+  --card-coral: #d1684a;
+  --card-dune: #e5b048;
+  --card-seaglass: #a4d4c5;
+
+  /* Decorative */
+  --accent-mist: #c5ddd6;
+  --accent-stone: #6b7d7a;
+
+  /* Semantic */
+  --success: #3f8f5f;
+  --warning: #c98a1f;
+  --error: #c2452f;
+
+  /* Spacing */
+  --space-xxs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-xxl: 48px;
+  --space-section: 96px;
+  --content-max: 1280px;
+  --control-height: 44px;
+  --nav-height: 64px;
+
+  /* Radius */
+  --radius-xs: 6px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 9999px;
+
+  /* Type */
+  --tracking-display-xl: -2.5px;
+  --tracking-display-lg: -2px;
+  --tracking-display-md: -1px;
+  --tracking-display-sm: -0.5px;
+  --tracking-title-lg: -0.3px;
+  --tracking-caps: 1.5px;
+  --font-display-variation: "SOFT" 30, "WONK" 0;
+}
+
+@theme inline {
+  --color-primary: var(--primary);
+  --color-primary-active: var(--primary-active);
+  --color-primary-disabled: var(--primary-disabled);
+  --color-accent: var(--accent);
+  --color-accent-active: var(--accent-active);
+
+  --color-ink: var(--ink);
+  --color-body-strong: var(--body-strong);
+  --color-body: var(--body);
+  --color-muted: var(--muted);
+  --color-muted-soft: var(--muted-soft);
+
+  --color-hairline: var(--hairline);
+  --color-hairline-soft: var(--hairline-soft);
+
+  --color-canvas: var(--canvas);
+  --color-surface-soft: var(--surface-soft);
+  --color-surface-card: var(--surface-card);
+  --color-surface-strong: var(--surface-strong);
+  --color-surface-dark: var(--surface-dark);
+  --color-surface-dark-elevated: var(--surface-dark-elevated);
+
+  --color-on-primary: var(--on-primary);
+  --color-on-dark: var(--on-dark);
+  --color-on-dark-soft: var(--on-dark-soft);
+  --color-on-accent: var(--on-accent);
+
+  --color-card-deep: var(--card-deep);
+  --color-card-aqua: var(--card-aqua);
+  --color-card-coral: var(--card-coral);
+  --color-card-dune: var(--card-dune);
+  --color-card-seaglass: var(--card-seaglass);
+
+  --color-accent-mist: var(--accent-mist);
+  --color-accent-stone: var(--accent-stone);
+
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-error: var(--error);
+
+  --font-display: var(--font-fraunces), "Iowan Old Style", Georgia, serif;
+  --font-body: var(--font-inter), system-ui, -apple-system, "Helvetica Neue", sans-serif;
+
+  --radius-xs: var(--radius-xs);
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: var(--radius-xl);
+  --radius-pill: var(--radius-pill);
+}
+
+/* Base element resets live in Tailwind's own "base" layer so that any
+   utility class (e.g. text-on-primary on a Link) can still override them —
+   unlayered CSS always beats layered CSS in the cascade, regardless of
+   specificity, which would otherwise make these resets un-overridable. */
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    /* Bakes in the ~110% browser zoom that reads right on a laptop —
+       scales text, spacing, and layout together, same as the reader
+       pressing Ctrl/Cmd+= a couple of times. Adjust this one number to
+       retune the whole site's scale. */
+    zoom: 1.1;
+  }
+
+  body {
+    margin: 0;
+    background: var(--canvas);
+    color: var(--body);
+    font-family: var(--font-body);
+    text-wrap: pretty;
+  }
+
+  a {
+    color: var(--primary);
+  }
+  a:hover {
+    color: var(--primary-active);
+  }
+
+  ::selection {
+    background: var(--accent-mist);
+    color: var(--ink);
+  }
+}

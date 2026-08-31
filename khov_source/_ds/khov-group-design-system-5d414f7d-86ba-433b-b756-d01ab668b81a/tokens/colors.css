@@ -1,0 +1,61 @@
+:root {
+  /* Brand */
+  --primary: #1a3a3a;
+  --primary-active: #14211f;
+  --primary-disabled: #e0d8c6;
+  --accent: #e5b048;
+  --accent-active: #d19d33;
+
+  /* Ink */
+  --ink: #14211f;
+  --body-strong: #1f302e;
+  --body: #3a4a48;
+  --muted: #4f5f5c;
+  --muted-soft: #6b7d7a;
+
+  /* Lines */
+  --hairline: #e0d8c6;
+  --hairline-soft: #ece5d6;
+
+  /* Surfaces */
+  --canvas: #f8f3e8;
+  --surface-soft: #f3ecdd;
+  --surface-card: #ede4d2;
+  --surface-strong: #e3d9c4;
+  --surface-dark: #14211f;
+  --surface-dark-elevated: #1a3a3a;
+
+  /* On-color text */
+  --on-primary: #f8f3e8;
+  --on-dark: #f8f3e8;
+  --on-dark-soft: #9db3ae;
+  --on-accent: #14211f;
+
+  /* Card fills — one color per card, cycled down the page */
+  --card-deep: #1a3a3a;
+  --card-aqua: #2f9788;
+  --card-coral: #d1684a;
+  --card-dune: #e5b048;
+  --card-seaglass: #a4d4c5;
+
+  /* Decorative */
+  --accent-mist: #c5ddd6;
+  --accent-stone: #6b7d7a;
+
+  /* Semantic — deliberately darker than dune/coral */
+  --success: #3f8f5f;
+  --warning: #c98a1f;
+  --error: #c2452f;
+
+  /* Semantic aliases */
+  --text-heading: var(--ink);
+  --text-body: var(--body);
+  --text-muted: var(--muted);
+  --text-caption: var(--muted-soft);
+  --text-on-dark: var(--on-dark);
+  --text-link: var(--primary);
+  --border-default: var(--hairline);
+  --border-soft: var(--hairline-soft);
+  --border-focus: var(--primary);
+  --surface-page: var(--canvas);
+}

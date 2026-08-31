@@ -1,0 +1,18 @@
+:root {
+  --space-xxs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-xxl: 48px;
+  --space-section: 96px;
+
+  --content-max: 1280px;
+  --pad-card-feature: 32px;
+  --pad-card-content: 24px;
+  --pad-band: 96px;
+  --pad-cta-band: 80px;
+  --control-height: 44px;
+  --nav-height: 64px;
+}

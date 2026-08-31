@@ -1,0 +1,13 @@
+/* KHOV Cove typefaces.
+   Display: Fraunces (variable serif, SOFT ~30, WONK off) — OFL.
+   Body:    Inter — OFL.
+   NOTE: served from Google Fonts CDN because no font binaries were supplied.
+   Self-host before production: drop woff2 files in assets/fonts/ and replace
+   the @import below with @font-face rules pointing at them. */
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600&display=swap");
+
+:root {
+  --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --font-body: "Inter", system-ui, -apple-system, "Helvetica Neue", sans-serif;
+  --font-display-variation: "SOFT" 30, "WONK" 0;
+}

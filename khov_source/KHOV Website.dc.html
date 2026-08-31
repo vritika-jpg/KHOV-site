@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/khov-group-design-system-5d414f7d-86ba-433b-b756-d01ab668b81a/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/khov-group-design-system-5d414f7d-86ba-433b-b756-d01ab668b81a/tokens/colors.css">
+<link rel="stylesheet" href="_ds/khov-group-design-system-5d414f7d-86ba-433b-b756-d01ab668b81a/tokens/typography.css">
+<link rel="stylesheet" href="_ds/khov-group-design-system-5d414f7d-86ba-433b-b756-d01ab668b81a/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/khov-group-design-system-5d414f7d-86ba-433b-b756-d01ab668b81a/tokens/radius.css">
+<link rel="stylesheet" href="_ds/khov-group-design-system-5d414f7d-86ba-433b-b756-d01ab668b81a/tokens/base.css">
+<link rel="stylesheet" href="_ds/khov-group-design-system-5d414f7d-86ba-433b-b756-d01ab668b81a/styles.css">
+<script src="_ds/khov-group-design-system-5d414f7d-86ba-433b-b756-d01ab668b81a/_ds_bundle.js"></script>
+<script src="./image-slot.js"></script>
+<style>
+  body { margin: 0; background: var(--canvas); }
+  a { color: var(--primary); }
+  a:hover { color: var(--primary-active); }
+</style>
+</helmet>
+
+<div style="background: var(--canvas); min-height: 100vh;">
+
+<x-import component-from-global-scope="KHOVGroupDesignSystem_5d414f.TopNav" brand="{{ brandNode }}" links="{{ navLinks }}" active="{{ page }}" on-navigate="{{ nav }}" action="{{ navAction }}" hint-size="100%,64px"></x-import>
+
+<sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+<div data-screen-label="Home">
+
+  <section style="background: var(--canvas); padding: var(--space-xxl) var(--space-xl);">
+    <div style="max-width: var(--content-max); margin: 0 auto; display: grid; grid-template-columns: minmax(0,7fr) minmax(0,5fr); gap: var(--space-xxl); align-items: center;">
+      <div style="display: grid; gap: var(--space-lg);">
+        <span style="font: 600 12px/1.4 var(--font-body); letter-spacing: var(--tracking-caps); text-transform: uppercase; color: var(--muted);">Washington DC area</span>
+        <h1 style="font: var(--text-display-xl); letter-spacing: var(--tracking-display-xl); font-variation-settings: var(--font-display-variation); color: var(--ink); margin: 0; text-wrap: pretty;">AI that actually gets used</h1>
+        <p style="font: 400 18px/1.55 var(--font-body); color: var(--body); margin: 0; max-width: 520px;">We help DC-area businesses find the AI work worth doing, then build it.</p>
+        <div style="display: flex; gap: var(--space-sm); flex-wrap: wrap; margin-top: var(--space-xs);">
+          <x-import component-from-global-scope="KHOVGroupDesignSystem_5d414f.Button" variant="primary" size="lg" on-click="{{ goContact }}" hint-size="180px,52px">Book a call</x-import>
+        </div>
+      </div>
+      <div>
+        <x-import component-from-global-scope="KHOVGroupDesignSystem_5d414f.ArcMotif" variant="quarter" fill="mist" height="380" hint-size="100%,380px"></x-import>
+      </div>
+    </div>
+  </section>
+
+  <x-import component-from-global-scope="KHOVGroupDesignSystem_5d414f.Band" tone="canvas" pad="tight" hint-size="100%,520px">
+    <div style="display: grid; gap: var(--space-xl);">
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: var(--space-xl); flex-wrap: wrap;">
+        <h2 style="font: var(--text-display-md); letter-spacing: var(--tracking-display-md); font-variation-settings: var(--font-display-variation); color: var(--ink); margin: 0;">What we do</h2>
+        <x-import component-from-global-scope="KHOVGroupDesignSystem_5d414f.TextLink" with-arrow="{{ true }}" on-click="{{ goServices }}" hint-size="140px,24px">All services</x-import>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-md);">
+        <div onClick="{{ goServices }}" style="cursor: pointer; display: grid;">
+          <x-import component-from-global-scope="KHOVGroupDesignSystem_5d414f.FeatureCard" color="deep" eyebrow="01" hint-size="100%,200px">
+            <h3 style="font: var(--text-title-lg); letter-spacing: var(--tracking-title-lg); color: inherit; margin: 0;">AI Opportunity Assessment</h3>
+            <span style="font: var(--text-body-sm); font-weight: 500; color: inherit; opacity: 0.85; margin-top: auto; padding-top: var(--space-md);">Learn more →</span>
+          </x-import>
+        </div>
+        <div onClick="{{ goServices }}" style="cursor: pointer; display: grid;">
+          <x-import component-from-global-scope="KHOVGroupDesignSystem_5d414f.FeatureCard" color="aqua" eyebrow="02" hint-size="100%,200px">
+            <h3 style="font: var(--text-title-lg); letter-spacing: var(--tracking-title-lg); color: inherit; margin: 0;">AI Assistants and Document Intelligence</h3>
+            <span style="font: var(--text-body-sm); font-weight: 500; color: inherit; opacity: 0.85; margin-top: auto; padding-top: var(--space-md);">Learn more →</span>
+          </x-import>
+        </div>
+        <div onClick="{{ goServices }}" style="cursor: pointer; display: grid;">
+          <x-import component-from-global-scope="KHOVGroupDesignSystem_5d414f.FeatureCard" color="dune" eyebrow="03" hint-size="100%,200px">
+            <h3 style="font: var(--text-title-lg); letter-spacing: var(--tracking-title-lg); color: inherit; margin: 0;">AI Workflow Automation</h3>
+            <span style="font: var(--text-body-sm); font-weight: 500; color: inherit; opacity: 0.85; margin-top: auto; padding-top: var(--space-md);">Learn more →</span>
+          </x-import>
+        </div>
+        <div onClick="{{ goServices }}" style="cursor: pointer; display: grid;">
+          <x-import component-from-global-scope="KHOVGroupDesignSystem_5d414f.FeatureCard" color="coral" eyebrow="04" hint-size="100%,200px">
+            <h3 style="font: var(--text-title-lg); letter-spacing: var(--tracking-title-lg); color: inherit; margin: 0;">AI Training and Enablement</h3>
+            <span style="font: var(--text-body-sm); font-weight: 500; color: inherit; opacity: 0.85; margin-top: auto; padding-top: var(--space-md);">Learn more →</span>
+          </x-import>
+        </div>
+        <div onClick="{{ goServices }}" style="cursor: pointer; display: grid; grid-column: span 2;">
+          <x-import component-from-global-scope="KHOVGroupDesignSystem_5d414f.FeatureCard" color="seaglass" eyebrow="05" hint-size="100%,200px">
+            <h3 style="font: var(--text-title-lg); letter-spacing: var(--tracking-title-lg); color: inherit; margin: 0;">Fractional AI Advisor</h3>
+            <span style="font: var(--text-body-sm); font-weight: 500; color: inherit; opacity: 0.85; margin-top: auto; padding-top: var(--space-md);">Learn more →</span>
+          </x-import>
+        </div>
+      </div>
+    </div>
+  </x-import>
+
+  <x-import component-from-global-scope="KHOVGroupDesignSystem_5d414f.Band" tone="soft" hint-size="100%,480px">
+    <div style="display: grid; gap: var(--space-xl);">
+      <h2 style="font: var(--text-display-md); letter-spacing: var(--tracking-display-md); font-variation-settings: var(--font-display-variation); color: var(--ink); margin: 0;">How we work</h2>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-md);">
+        <x-import component-from-global-scope="KHOVGroupDesignSystem_5d414f.FeatureCard" color="cream" eyebrow="Step one" hint-size="100%,200px">
+          <h3 style="font: var(--text-title-lg); letter-spacing: var(--tracking-title-lg); color: inherit; margin: 0;">Assess</h3>
+          <p style="font: var(--text-body-md); color: inherit; opacity: 0.8; margin: 0;">We map your workflows and find what is worth automating.</p>
+        </x-import>
+        <x-import component-from-global-scope="KHOVGroupDesignSystem_5d414f.FeatureCard" color="cream" eyebrow="Step two" hint-size="100%,200px">
+          <h3 style="font: var(--text-title-lg); letter-spacing: var(--tracking-title-lg); color: inherit; margin: 0;">Build</h3>
+          <p style="font: var(--text-body-md); color: inherit; opacity: 0.8; margin: 0;">We ship the smallest thing that works, then expand.</p>
+        </x-import>
+        <x-import component-from-global-scope="KHOVGroupDesignSystem_5d414f.FeatureCard" color="cream" eyebrow="Step three" hint-size="100%,200px">
+          <h3 style="font: var(--text-title-lg); letter-spacing: var(--tracking-title-lg); color: inherit; margin: 0;">Hand off</h3>
+          <p style="font: var(--text-body-md); color: inherit; opacity: 0.8; margin: 0;">We train your team so it runs without us.</p>
+        </x-import>
+      </div>
+    </div>
+  </x-import>
+
+  <x-import component-from-global-scope="KHOVGroupDesignSystem_5d414f.Band" tone="canvas" hint-size="100%,320px">
+    <x-import component-from-global-scope="KHOVGroupDesignSystem_5d414f.CtaBand" tone="dark" headline="Tell us what is not working" actions="{{ accentCta }}" hint-size="100%,280px"></x-import>
+  </x-import>
+
+</div>
+</sc-if>
+
+<sc-if value="{{ isServices }}" hint-placeholder-val="{{ false }}">
+<div data-screen-label="Services">
+
+  <x-import component-from-global-scope="KHOVGroupDesignSystem_5d414f.Band" tone="canvas" style="padding-top: var(--space-xxl)" hint-size="100%,240px">
+    <div style="display: grid; gap: var(--space-md); max-width: 640px;">
+      <span style="font: 600 12px/1.4 var(--font-body); letter-spacing: var(--tracking-caps); text-transform: uppercase; color: var(--muted);">Services</span>
+      <h1 style="font: var(--text-display-lg); letter-spacing: var(--tracking-display-lg); font-variation-settings: var(--font-display-variation); color: var(--ink); margin: 0;">Start small. Go further when it earns it.</h1>
+      <p style="font: var(--text-body-md); color: var(--body); margin: 0;">Most clients begin with an assessment. Each step below builds on the one before it.</p>
+    </div>
+  </x-import>
+
+  <x-import component-from-global-scope="KHOVGroupDesignSystem_5d414f.Band" tone="canvas" pad="none" hint-size="100%,900px">
+    <div style="display: grid; gap: var(--space-md); padding-bottom: var(--space-section);">
+
+      <x-import component-from-global-scope="KHOVGroupDesignSystem_5d414f.FeatureCard" color="cream" hint-size="100%,180px">
+        <div style="display: grid; grid-template-columns: 72px minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-lg); align-items: start;">
+          <span style="font: var(--text-display-sm); letter-spacing: var(--tracking-display-sm); font-variation-settings: var(--font-display-variation); color: var(--muted-soft);">01</span>
+          <h3 style="font: var(--text-title-lg); letter-spacing: var(--tracking-title-lg); color: var(--ink); margin: 0;">AI Opportunity Assessment</h3>
+          <div style="display: grid; gap: var(--space-sm);">
+            <p style="font: var(--text-body-md); color: var(--body); margin: 0;">Fixed-fee, two to four weeks. We map your workflows into a prioritized roadmap. The lowest-risk way to start.</p>
+            <span style="font: 600 12px/1.4 var(--font-body); letter-spacing: var(--tracking-caps); text-transform: uppercase; color: var(--muted-soft);">Entry point</span>
+          </div>
+        </div>
+      </x-import>
+
+      <x-import component-from-global-scope="KHOVGroupDesignSystem_5d414f.FeatureCard" color="cream" hint-size="100%,180px">
+        <div style="display: grid; grid-template-columns: 72px minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-lg); align-items: start;">
+          <span style="font: var(--text-display-sm); letter-spacing: var(--tracking-display-sm); font-variation-settings: var(--font-display-variation); color: var(--muted-soft);">02</span>
+          <h3 style="font: var(--text-title-lg); letter-spacing: var(--tracking-title-lg); color: var(--ink); margin: 0;">AI Assistants and Document Intelligence</h3>
+          <p style="font: var(--text-body-md); color: var(--body); margin: 0;">Source-cited assistants that answer questions from your own documents.</p>
+        </div>
+      </x-import>
+
+      <x-import component-from-global-scope="KHOVGroupDesignSystem_5d414f.FeatureCard" color="cream" hint-size="100%,180px">
+        <div style="display: grid; grid-template-columns: 72px minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-lg); align-items: start;">
+          <span style="font: var(--text-display-sm); letter-spacing: var(--tracking-display-sm); font-variation-settings: var(--font-display-variation); color: var(--muted-soft);">03</span>
+          <h3 style="font: var(--text-title-lg); letter-spacing: var(--tracking-title-lg); color: var(--ink); margin: 0;">AI Workflow Automation</h3>
+          <p style="font: var(--text-body-md); color: var(--body); margin: 0;">Agents that absorb repetitive work: call answering, booking, drafting, data entry, follow-ups.</p>
+        </div>
+      </x-import>
+
+      <x-import component-from-global-scope="KHOVGroupDesignSystem_5d414f.FeatureCard" color="cream" hint-size="100%,180px">
+        <div style="display: grid; grid-template-columns: 72px minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-lg); align-items: start;">
+          <span style="font: var(--text-display-sm); letter-spacing: var(--tracking-display-sm); font-variation-settings: var(--font-display-variation); color: var(--muted-soft);">04</span>
+          <h3 style="font: var(--text-title-lg); letter-spacing: var(--tracking-title-lg); color: var(--ink); margin: 0;">AI Training and Enablement</h3>
+          <div style="display: grid; gap: var(--space-sm);">
+            <p style="font: var(--text-body-md); color: var(--body); margin: 0;">Hands-on workshops that make adoption stick. Available in English and French.</p>
+          </div>
+        </div>
+      </x-import>
+
+      <x-import component-from-global-scope="KHOVGroupDesignSystem_5d414f.FeatureCard" color="deep" hint-size="100%,220px">
+        <div style="display: grid; grid-template-columns: 72px minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-lg); align-items: start;">
+          <span style="font: var(--text-display-sm); letter-spacing: var(--tracking-display-sm); font-variation-settings: var(--font-display-variation); color: var(--on-dark-soft);">05</span>
+          <div style="display: grid; gap: var(--space-sm);">
+            <span style="font: 600 12px/1.4 var(--font-body); letter-spacing: var(--tracking-caps); text-transform: uppercase; color: var(--card-seaglass);">Ongoing</span>
+            <h3 style="font: var(--text-title-lg); letter-spacing: var(--tracking-title-lg); color: var(--on-dark); margin: 0;">Fractional AI Advisor</h3>
+          </div>
+          <div style="display: grid; gap: var(--space-md); justify-items: start;">
+            <p style="font: var(--text-body-md); color: var(--on-dark); opacity: 0.85; margin: 0;">Monthly retainer for prioritization and build-versus-buy guidance.</p>
+            <x-import component-from-global-scope="KHOVGroupDesignSystem_5d414f.Button" variant="accent" on-click="{{ goContact }}" hint-size="160px,44px">Book a call</x-import>
+          </div>
+        </div>
+      </x-import>
+
+    </div>
+  </x-import>
+
+</div>
+</sc-if>
+
+<sc-if value="{{ isTeam }}" hint-placeholder-val="{{ false }}">
+<div data-screen-label="Team">
+
+  <x-import component-from-global-scope="KHOVGroupDesignSystem_5d414f.Band" tone="canvas" style="padding-top: var(--space-xxl)" hint-size="100%,240px">
+    <div style="display: grid; gap: var(--space-md); max-width: 640px;">
+      <span style="font: 600 12px/1.4 var(--font-body); letter-spacing: var(--tracking-caps); text-transform: uppercase; color: var(--muted);">Team</span>
+      <h1 style="font: var(--text-display-lg); letter-spacing: var(--tracking-display-lg); font-variation-settings: var(--font-display-variation); color: var(--ink); margin: 0;">Four grads, one consulting firm</h1>
+      <p style="font: var(--text-body-md); color: var(--body); margin: 0;">We hold master's degrees in information systems and artificial intelligence from Johns Hopkins. We started KHOV Group to help businesses in the DMV area put AI to work.</p>
+    </div>
+  </x-import>
+
+  <x-import component-from-global-scope="KHOVGroupDesignSystem_5d414f.Band" tone="canvas" pad="none" hint-size="100%,560px">
+    <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-md); padding-bottom: var(--space-section);">
+      <div onMouseEnter="{{ hoverH }}" onMouseLeave="{{ hoverOff }}" style="display: grid; gap: var(--space-md);">
+        <div style="height: 260px; border-radius: var(--radius-lg); overflow: hidden; background: var(--surface-card);">
+          <image-slot id="khov-team-1" shape="rect" placeholder="[PHOTO PLACEHOLDER]"></image-slot>
+        </div>
+        <div style="display: grid; gap: var(--space-xxs);">
+          <h3 style="font: var(--text-title-md); color: var(--ink); margin: 0;">MEGAN HUBER</h3>
+          <span style="font: 600 12px/1.4 var(--font-body); letter-spacing: var(--tracking-caps); text-transform: uppercase; color: var(--muted); min-height: 34px;">Product</span>
+          <p style="font: var(--text-body-sm); color: var(--body); margin: var(--space-xxs) 0 0;">[BACKGROUND LINE PLACEHOLDER — one sentence.]</p>
+        </div>
+      </div>
+      <div onMouseEnter="{{ hoverK }}" onMouseLeave="{{ hoverOff }}" style="display: grid; gap: var(--space-md);">
+        <div style="height: 260px; border-radius: var(--radius-lg); overflow: hidden; background: var(--surface-card);">
+          <image-slot id="khov-team-2" shape="rect" placeholder="[PHOTO PLACEHOLDER]"></image-slot>
+        </div>
+        <div style="display: grid; gap: var(--space-xxs);">
+          <h3 style="font: var(--text-title-md); color: var(--ink); margin: 0;">KHADIDIATOU DIA</h3>
+          <span style="font: 600 12px/1.4 var(--font-body); letter-spacing: var(--tracking-caps); text-transform: uppercase; color: var(--muted); min-height: 34px;">Operations</span>
+          <p style="font: var(--text-body-sm); color: var(--body); margin: var(--space-xxs) 0 0;">[BACKGROUND LINE PLACEHOLDER — one sentence.]</p>
+        </div>
+      </div>
+      <div onMouseEnter="{{ hoverV }}" onMouseLeave="{{ hoverOff }}" style="display: grid; gap: var(--space-md);">
+        <div style="height: 260px; border-radius: var(--radius-lg); overflow: hidden; background: var(--surface-card);">
+          <image-slot id="khov-team-3" shape="rect" placeholder="[PHOTO PLACEHOLDER]"></image-slot>
+        </div>
+        <div style="display: grid; gap: var(--space-xxs);">
+          <h3 style="font: var(--text-title-md); color: var(--ink); margin: 0;">VRITIKA NARRA</h3>
+          <span style="font: 600 12px/1.4 var(--font-body); letter-spacing: var(--tracking-caps); text-transform: uppercase; color: var(--muted); min-height: 34px;">Finance and legal</span>
+          <p style="font: var(--text-body-sm); color: var(--body); margin: var(--space-xxs) 0 0;">[BACKGROUND LINE PLACEHOLDER — one sentence.]</p>
+        </div>
+      </div>
+      <div onMouseEnter="{{ hoverO }}" onMouseLeave="{{ hoverOff }}" style="display: grid; gap: var(--space-md);">
+        <div style="height: 260px; border-radius: var(--radius-lg); overflow: hidden; background: var(--surface-card);">
+          <image-slot id="khov-team-4" shape="rect" placeholder="[PHOTO PLACEHOLDER]"></image-slot>
+        </div>
+        <div style="display: grid; gap: var(--space-xxs);">
+          <h3 style="font: var(--text-title-md); color: var(--ink); margin: 0;">O.J. IDOGUN</h3>
+          <span style="font: 600 12px/1.4 var(--font-body); letter-spacing: var(--tracking-caps); text-transform: uppercase; color: var(--muted); min-height: 34px;">Business development</span>
+          <p style="font: var(--text-body-sm); color: var(--body); margin: var(--space-xxs) 0 0;">[BACKGROUND LINE PLACEHOLDER — one sentence.]</p>
+        </div>
+      </div>
+    </div>
+  </x-import>
+
+</div>
+</sc-if>
+
+<sc-if value="{{ isContact }}" hint-placeholder-val="{{ false }}">
+<div data-screen-label="Contact">
+
+  <x-import component-from-global-scope="KHOVGroupDesignSystem_5d414f.Band" tone="canvas" style="padding-top: var(--space-xxl)" hint-size="100%,700px">
+    <div style="display: grid; grid-template-columns: minmax(0,5fr) minmax(0,6fr); gap: var(--space-xxl); align-items: start;">
+      <div style="display: grid; gap: var(--space-md);">
+        <span style="font: 600 12px/1.4 var(--font-body); letter-spacing: var(--tracking-caps); text-transform: uppercase; color: var(--muted);">Contact</span>
+        <h1 style="font: var(--text-display-lg); letter-spacing: var(--tracking-display-lg); font-variation-settings: var(--font-display-variation); color: var(--ink); margin: 0;">Tell us what you are trying to fix. We will tell you if we can help.</h1>
+        <p style="font: var(--text-body-md); color: var(--body); margin: 0;">Or email <a href="mailto:hello@khovgroup.com" style="color: var(--primary); font-weight: 500;">hello@khovgroup.com</a>.</p>
+      </div>
+      <div style="background: var(--surface-card); border-radius: var(--radius-lg); padding: var(--space-xl);">
+        <form onSubmit="{{ submit }}" style="display: grid; gap: var(--space-md);">
+          <x-import component-from-global-scope="KHOVGroupDesignSystem_5d414f.Field" label="Name" html-for="khov-name" hint-size="100%,72px">
+            <x-import component-from-global-scope="KHOVGroupDesignSystem_5d414f.Input" id="khov-name" name="name" hint-size="100%,44px"></x-import>
+          </x-import>
+          <x-import component-from-global-scope="KHOVGroupDesignSystem_5d414f.Field" label="Company" html-for="khov-company" hint-size="100%,72px">
+            <x-import component-from-global-scope="KHOVGroupDesignSystem_5d414f.Input" id="khov-company" name="company" hint-size="100%,44px"></x-import>
+          </x-import>
+          <x-import component-from-global-scope="KHOVGroupDesignSystem_5d414f.Field" label="Email" html-for="khov-email" hint-size="100%,90px">
+            <x-import component-from-global-scope="KHOVGroupDesignSystem_5d414f.Input" id="khov-email" name="email" type="email" hint-size="100%,44px"></x-import>
+          </x-import>
+          <x-import component-from-global-scope="KHOVGroupDesignSystem_5d414f.Field" label="Message" html-for="khov-message" hint-size="100%,160px">
+            <x-import component-from-global-scope="KHOVGroupDesignSystem_5d414f.Textarea" id="khov-message" name="message" rows="5" hint-size="100%,120px"></x-import>
+          </x-import>
+          <div style="display: flex; align-items: center; gap: var(--space-md); flex-wrap: wrap;">
+            <x-import component-from-global-scope="KHOVGroupDesignSystem_5d414f.Button" variant="accent" type="submit" hint-size="140px,44px">Send</x-import>
+            <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+              <span style="font: var(--text-body-sm); color: var(--success);">Thanks. We will be in touch.</span>
+            </sc-if>
+          </div>
+        </form>
+      </div>
+    </div>
+  </x-import>
+
+</div>
+</sc-if>
+
+<x-import component-from-global-scope="KHOVGroupDesignSystem_5d414f.ArcMotif" variant="rule" fill="mist" height="120" hint-size="100%,120px"></x-import>
+<x-import component-from-global-scope="KHOVGroupDesignSystem_5d414f.Footer" brand="{{ footerBrand }}" note="Technology consulting for small and mid-size businesses in the Washington DC area." columns="{{ footerColumns }}" legal="© 2026 KHOV Group LLC" hint-size="100%,240px"></x-import>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;ctaLabel&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Book a call&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;startPage&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Home&quot;,&quot;Services&quot;,&quot;Team&quot;,&quot;Contact&quot;],&quot;default&quot;:&quot;Home&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+const DS = () => window.KHOVGroupDesignSystem_5d414f || {};
+
+class Component extends DCLogic {
+  state = { page: this.props.startPage || 'Home', sent: false, lit: {}, pinned: null };
+
+  static LETTERS = [['K', 'var(--card-aqua)'], ['H', 'var(--card-dune)'], ['O', 'var(--accent-stone)'], ['V', 'var(--card-coral)']];
+
+  timers = [];
+
+  clearTimers() { this.timers.forEach(clearTimeout); this.timers = []; }
+  componentWillUnmount() { this.clearTimers(); }
+
+  runSequence(on) {
+    this.clearTimers();
+    const seq = on ? Component.LETTERS : Component.LETTERS.slice().reverse();
+    seq.forEach(([ch, color], i) => {
+      this.timers.push(setTimeout(() => {
+        this.setState((s) => {
+          const lit = { ...s.lit };
+          if (on) lit[ch] = color; else delete lit[ch];
+          return { lit };
+        });
+      }, i * 60));
+    });
+  }
+
+  pin(ch) { this.setState({ pinned: ch }); }
+
+  buildWordmark() {
+    const chars = 'KHOV'.split('');
+    const colorFor = (ch) => {
+      if (this.state.page === 'Team' && this.state.pinned) {
+        const hit = Component.LETTERS.find(([c]) => c === this.state.pinned);
+        if (this.state.pinned === ch && hit) return hit[1];
+      }
+      return this.state.lit[ch] || 'var(--ink)';
+    };
+    return React.createElement('span', {
+      onClick: () => this.go('Home'),
+      onMouseEnter: () => this.runSequence(true),
+      onMouseLeave: () => this.runSequence(false),
+      style: {
+        font: '500 20px/1.1 var(--font-display)', fontVariationSettings: 'var(--font-display-variation)',
+        letterSpacing: '-0.4px', cursor: 'pointer', color: 'var(--ink)', whiteSpace: 'nowrap',
+      },
+    }, [
+      ...chars.map((ch) => React.createElement('span', {
+        key: ch, style: { color: colorFor(ch), transition: 'color 140ms ease' },
+      }, ch)),
+      React.createElement('span', { key: 'rest' }, ' Group'),
+    ]);
+  }
+
+  go = (page) => { this.setState({ page }); window.scrollTo(0, 0); };
+
+  renderVals() {
+    const ds = DS();
+    const page = this.state.page;
+    const label = this.props.ctaLabel ?? 'Book a call';
+    const brand = this.buildWordmark();
+    const footerMark = ds.Wordmark
+      ? React.createElement(ds.Wordmark, { size: 20, onClick: () => this.go('Home'), style: { cursor: 'pointer' } })
+      : null;
+    return {
+      page,
+      sent: this.state.sent,
+      isHome: page === 'Home',
+      isServices: page === 'Services',
+      isTeam: page === 'Team',
+      isContact: page === 'Contact',
+      brandNode: brand,
+      footerBrand: footerMark,
+      hoverK: () => this.pin('K'),
+      hoverH: () => this.pin('H'),
+      hoverO: () => this.pin('O'),
+      hoverV: () => this.pin('V'),
+      hoverOff: () => this.pin(null),
+      navLinks: [{ label: 'Home' }, { label: 'Services' }, { label: 'Team' }],
+      nav: (l) => this.go(l.label),
+      navAction: ds.Button
+        ? React.createElement(ds.Button, { variant: 'secondary', size: 'sm', onClick: () => this.go('Contact') }, 'Contact')
+        : null,
+      accentCta: ds.Button
+        ? React.createElement(ds.Button, { variant: 'accent', size: 'lg', onClick: () => this.go('Contact'), style: { background: 'var(--card-coral)', color: 'var(--on-dark)' } }, label)
+        : null,
+      footerColumns: [
+        { title: 'Contact', links: [{ label: 'hello@khovgroup.com', href: 'mailto:hello@khovgroup.com' }] },
+        { title: 'Pages', links: [{ label: 'Home', href: '#' }, { label: 'Services', href: '#' }, { label: 'Team', href: '#' }, { label: 'Contact', href: '#' }] },
+      ],
+      goServices: () => this.go('Services'),
+      goContact: () => this.go('Contact'),
+      submit: (e) => { e.preventDefault(); this.setState({ sent: true }); },
+    };
+  }
+}
+</script>
+</body>
+</html>
